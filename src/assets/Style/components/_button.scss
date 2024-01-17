@@ -12,12 +12,16 @@
     width: 100%;
     background-color: #FFFFFF;
     @extend .rounded;
+    cursor: pointer;
+
   }
   &__icon{
     @extend .positionCenter;
     left: 1rem;
     width: 15px;
     height: 15px;
+    cursor: pointer;
+
     @include break(xxs){
       left: 5px;
     }

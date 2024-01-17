@@ -1,6 +1,11 @@
+@import "./base/variables";
+@import "./base/typography";
+@import "./components/scrollbar";
 @import "./base/responsive";
 @import "./base/font";
 @import "./base/global";
 @import "components/header";
 @import "./pages/home";
 @import "./components/button";
+@import "./components/story";
+
