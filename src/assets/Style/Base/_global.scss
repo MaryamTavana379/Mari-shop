@@ -28,8 +28,21 @@ body, html{
     width: 100%;
     background-color: #ededed;
     height: 60px;
-    border-radius: 50px;
-    border: unset;
     padding: 2rem;
+    @extend .rounded;
   }
+  section{
+    margin-top: 2rem;
+  }
+}
+
+.rounded{
+  border-radius: 50px;
+  border: unset;
+}
+.positionCenter{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }

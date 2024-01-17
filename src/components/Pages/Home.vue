@@ -1,5 +1,6 @@
 <script setup>
 import Header from "../Common/Header.vue";
+import Button from "@cp/Common/Button.vue";
 
 </script>
 
@@ -23,6 +24,17 @@ import Header from "../Common/Header.vue";
         </div>
       </div>
     </Header>
+    <section class="hero">
+      <div class="hero__container">
+        <div class="hero__container--banner">
+          <img src="@media/image/home/banner.png"/>
+        </div>
+        <div class="hero__container--btn">
+          <Button />
+
+        </div>
+      </div>
+    </section>
   </div>
 
 

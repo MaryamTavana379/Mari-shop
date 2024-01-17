@@ -3,11 +3,11 @@
 </script>
 
 <template>
-  <div class="header">
+  <header class="header">
     <div class="header__container">
       <slot></slot>
     </div>
-  </div>
+  </header>
 
 </template>
 

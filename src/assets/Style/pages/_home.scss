@@ -35,4 +35,23 @@
       }
     }
   }
+  .hero{
+    position: relative;
+    &__container{
+      &--banner{
+        img{
+          display: flex;
+        }
+      }
+      &--btn{
+        position: absolute;
+        bottom: 10px;
+        right: 3rem;
+        @include break(xs){
+          right: 2rem;
+
+        }
+      }
+    }
+  }
 }

@@ -1,0 +1,25 @@
+.button{
+  position: relative;
+  display: flex;
+  width: 9rem;
+  height: 2.65rem;
+  @include break(xxs){
+    height: 1.5rem;
+    width: 5rem;
+  }
+
+  button{
+    width: 100%;
+    background-color: #FFFFFF;
+    @extend .rounded;
+  }
+  &__icon{
+    @extend .positionCenter;
+    left: 1rem;
+    width: 15px;
+    height: 15px;
+    @include break(xxs){
+      left: 5px;
+    }
+  }
+}
