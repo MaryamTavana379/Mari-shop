@@ -30,18 +30,13 @@
         width: 30px;
         height: 30px;
         margin: auto;
-        display: flex;
       }
     }
   }
   .hero{
     position: relative;
     &__container{
-      &--banner{
-        img{
-          display: flex;
-        }
-      }
+
       &--btn{
         position: absolute;
         bottom: 10px;
@@ -58,5 +53,12 @@
     gap: 1rem;
     overflow-x: scroll;
     padding-bottom: 2rem;
+  }
+  .products{
+    &__container{
+      &--item{
+        margin-top: 1rem;
+      }
+    }
   }
 }

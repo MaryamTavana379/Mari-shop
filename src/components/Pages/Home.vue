@@ -2,6 +2,7 @@
 import Header from "../Common/Header.vue";
 import Button from "@cp/Common/Button.vue";
 import Story from "@cp/Common/Story.vue";
+import ProductSwiper from "@cp/Common/ProductSwiper.vue";
 const storyData = [
   {id:1, img: 'image/home/story1.jpg', title:'مریم محمدپور'},
   {id:2, img: 'image/home/story2.jpg', title:'زهرا توانا'},
@@ -11,6 +12,13 @@ const storyData = [
   {id:2, img: 'image/home/story2.jpg', title:'مریم توانا'},
   {id:1, img: 'image/home/story5.jpg', title:'مریم علیزاده '},
   {id:2, img: 'image/home/story2.jpg', title:'مریم توانا'},
+
+]
+const productsData = [
+  {id:1, img:'image/home/product1.jpg', title:" هودی مشکی مردانه" , price: "800,000"},
+  {id:1, img:'image/home/product2.jpg', title:" هودی مردانه زانتوس" , price: "1,800,000"},
+  {id:1, img:'image/home/product3.jpg', title:" هودی مردانه ایزی دو مدل" , price: "500,000"},
+  {id:1, img:'image/home/product1.jpg', title:" هودی مشکی مردانه" , price: "800,000"},
 
 ]
 
@@ -49,7 +57,15 @@ const storyData = [
     </section>
     <section class="story">
       <Story v-for="item in storyData" :key="item.id" :data="item"/>
+    </section>
+    <section class="products">
+      <div class="products__container">
+        <h2> محصولات محبوب </h2>
+        <div class="products__container--item">
+          <ProductSwiper :data="productsData" />
 
+        </div>
+      </div>
     </section>
   </div>
 

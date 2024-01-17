@@ -9,7 +9,6 @@ body, html{
   #app{
     background-color: $WhiteColor;
     max-width: 600px;
-    height: 100vh;
     margin: auto;
     font-family: 'YekanBakh-FaNum';
     font-size: 16px;
@@ -22,6 +21,7 @@ body, html{
 
 }
 img{
+  display: flex;
   width: 100%;
   height: 100%;
 }
