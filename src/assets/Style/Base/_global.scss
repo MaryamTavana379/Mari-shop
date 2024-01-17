@@ -13,6 +13,9 @@ body, html{
     margin: auto;
     font-family: 'YekanBakh-FaNum';
     font-size: 16px;
+    @include break(xs){
+      font-size: 14px;
+    }
 
   }
 
@@ -28,6 +31,8 @@ img{
   padding-top: 3rem;
 }
 input{
+  font-family: 'YekanBakh-FaNum';
+  font-size: 1rem;
   width: 100%;
   background-color:$MainColor ;
   height: 60px;
