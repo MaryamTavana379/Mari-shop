@@ -3,6 +3,8 @@ import Header from "../Common/Header.vue";
 import Button from "@cp/Common/Button.vue";
 import Story from "@cp/Common/Story.vue";
 import ProductSwiper from "@cp/Common/ProductSwiper.vue";
+import IconButton from "@cp/Common/IconButton.vue";
+
 const storyData = [
   {id:1, img: 'image/home/story1.jpg', title:'مریم محمدپور'},
   {id:2, img: 'image/home/story2.jpg', title:'زهرا توانا'},
@@ -27,20 +29,21 @@ const productsData = [
 <template>
   <div class="container">
     <Header>
-      <div class="search">
-        <div class="search__container">
-          <div class="search__container--input">
-            <input type="search" placeholder="جستجوی محصول"/>
-            <div class="search__container--input-icon">
-              <img src="@media/icon/home/search.svg" />
+      <div class="header__home">
+        <div class="search">
+          <div class="search__container">
+            <div class="search__container--input">
+              <input type="search" placeholder="جستجوی محصول"/>
+              <div class="search__container--input-icon">
+                <img src="@media/icon/home/search.svg" />
+              </div>
             </div>
-          </div>
 
+          </div>
         </div>
-      </div>
-      <div class="filter">
-        <div class="filter__container">
-          <img src="@media/icon/home/filter.svg" />
+        <div class="filter">
+          <IconButton img="icon/home/filter.svg" />
+
         </div>
       </div>
     </Header>

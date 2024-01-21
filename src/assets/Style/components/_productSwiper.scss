@@ -5,9 +5,9 @@
       gap: 1rem;
       justify-items: start;
       &-img{
-        border-radius: 20px;
+        border-radius: 25px;
         overflow: hidden;
-        height: 18rem;
+        height: 15rem;
         @include break(sm){
           height: 20rem;
         }

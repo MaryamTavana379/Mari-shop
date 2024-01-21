@@ -9,8 +9,8 @@ const showLike = ()=>{
 
 <template>
   <div class="likes" @click="showLike" >
-    <img  v-if="liked" src="@media/icon/home/like.svg"/>
-    <img v-else src="@media/icon/home/unLike.svg"/>
+    <img  v-if="liked" src="../../assets/media/icon/home/like.svg"/>
+    <img v-else src="../../assets/media/icon/home/unLike.svg"/>
   </div>
 
 </template>
@@ -22,6 +22,7 @@ const showLike = ()=>{
   position: absolute;
   top: 1rem;
   right: 1rem;
+  cursor: pointer;
 }
 
 </style>

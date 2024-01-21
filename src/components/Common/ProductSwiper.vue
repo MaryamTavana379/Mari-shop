@@ -1,7 +1,7 @@
 <script setup>
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
-import Like from "@style/components/Like.vue";
+import Like from "@cp/Common/Like.vue";
 const props = defineProps(['data']);
 const  breakpoints={
 '320': {

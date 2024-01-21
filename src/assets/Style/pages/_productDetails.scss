@@ -1,0 +1,106 @@
+.container{
+  &__content{
+    &--product{
+      border-bottom: 2px solid $MainColor;
+      &-img{
+        position: relative;
+        .img__box{
+          border-radius: 25px;
+          overflow: hidden;
+          height: 500px;
+          @include break(xxs){
+            height: 400px;
+          }
+        }
+        .img__colors{
+          position: absolute;
+          display: flex;
+          gap: 15px;
+          width: 80%;
+          margin: auto;
+          right: 0;
+          left: 0;
+          justify-content: space-between;
+          bottom: 2rem;
+          div{
+            @extend .circle;
+            border: 3px solid $WhiteColor;
+            width: 70px;
+            height: 70px;
+            @include break(xxs){
+              width: 60px;
+              height: 60px;
+            }
+          }
+          .isActiveColor{
+            &:before{
+              content: '\2713';
+              height: 100%;
+              margin: auto;
+              display: flex;
+              font-size: 2rem;
+              color: $WhiteColor;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
+      }
+      &-meta{
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 20%;
+        align-items: center;
+        padding-bottom: 2rem;
+        .meta__icon{
+          position: absolute;
+          width: 60px;
+          height: 60px;
+          border-radius: 50px;
+          border: 1px solid $MainColor;
+          left: 0;
+          .likes{
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 35px;
+            height: 35px;
+          }
+        }
+      }
+
+    }
+    &--properties{
+      display: grid;
+      grid-template-columns: 15% 1fr;
+      align-items: center;
+      overflow: auto;
+      padding-bottom: 1rem;
+      gap: 1rem;
+      &-list{
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        .list__item{
+          //@extend .meta__icon;
+          cursor: pointer;
+          width: 60px;
+          height: 60px;
+          border-radius: 50px;
+          border: 2px solid $MainColor;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+        }
+        .isActiveSize{
+          background-color: #76db7d;
+        }
+      }
+
+    }
+  }
+
+}

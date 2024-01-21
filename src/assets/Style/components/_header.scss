@@ -1,8 +1,17 @@
 .header{
-  &__container{
+  &__home{
     display: grid;
     grid-template-columns: 84% 14%;
     align-items: center;
     gap: 2%;
+  }
+  &__productDetails{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .iconButton{
+      background-color: $MainColor;
+    }
   }
 }

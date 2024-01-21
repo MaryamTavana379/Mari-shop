@@ -19,19 +19,8 @@
     }
   }
   .filter{
-  display: flex;
+    display: flex;
     justify-content: end;
-    &__container{
-      background-color: $SecondaryColor;
-      display: flex;
-      @extend .circle;
-
-      img{
-        width: 30px;
-        height: 30px;
-        margin: auto;
-      }
-    }
   }
   .hero{
     position: relative;

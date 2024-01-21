@@ -1,7 +1,7 @@
 @import "./base/variables";
+@import "./base/responsive";
 @import "./base/typography";
 @import "./components/scrollbar";
-@import "./base/responsive";
 @import "./base/font";
 @import "./base/global";
 @import "components/header";
@@ -9,4 +9,6 @@
 @import "./components/button";
 @import "./components/story";
 @import "./components/productSwiper";
+@import "./components/iconButton";
+@import "./pages/productDetails";
 
