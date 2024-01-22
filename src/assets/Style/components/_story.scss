@@ -6,7 +6,7 @@
   &--profile{
     display: flex;
     @extend .circle;
-    border: 2px solid #079f07;
+    border: 2px solid $SecondaryColor;
     width: 80px;
     height: 80px;
     overflow: hidden;

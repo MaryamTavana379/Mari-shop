@@ -1,12 +1,14 @@
-.container{
-  .search{
-    &__container{
+.container {
+  .search {
+    &__container {
       position: relative;
       display: flex;
-      &--input{
+
+      &--input {
         width: 100%;
         display: flex;
-        &-icon{
+
+        &-icon {
           position: absolute;
           width: 30px;
           height: 30px;
@@ -18,34 +20,47 @@
       }
     }
   }
-  .filter{
+
+  .filter {
     display: flex;
     justify-content: end;
   }
-  .hero{
-    position: relative;
-    &__container{
 
-      &--btn{
+  .hero {
+    position: relative;
+
+    &__container {
+      &--banner{
+        width: 100%;
+        height: 20vh;
+        border-radius: 25px;
+        overflow: hidden;
+      }
+
+      &--btn {
         position: absolute;
         bottom: 10px;
         right: 3rem;
-        @include break(xs){
+        @include break(xs) {
           right: 2rem;
 
         }
       }
     }
   }
-  .story{
+
+  .story {
     display: flex;
     gap: 1rem;
     overflow-x: scroll;
-    padding-bottom: 2rem;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
-  .products{
-    &__container{
-      &--item{
+
+  .products {
+    &__container {
+      &--item {
         margin-top: 1rem;
       }
     }

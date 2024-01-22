@@ -50,7 +50,7 @@ const productsData = [
     <section class="hero">
       <div class="hero__container">
         <div class="hero__container--banner">
-          <img src="@media/image/home/banner.png"/>
+          <img src="@media/image/home/banner.jpg"/>
         </div>
         <div class="hero__container--btn">
           <Button />
