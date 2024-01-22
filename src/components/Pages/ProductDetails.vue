@@ -28,9 +28,9 @@ let activeSize = ref('XS');
   <div class="container">
     <Header>
       <div class="header__productDetails">
-        <IconButton img="icon/home/filter.svg" />
+        <IconButton img="icon/productDetails/arrow-right.svg" />
         <h2> جزییات محصول </h2>
-        <IconButton img="icon/home/filter.svg" />
+        <IconButton img="icon/productDetails/arrow-left.svg" />
       </div>
     </Header>
 

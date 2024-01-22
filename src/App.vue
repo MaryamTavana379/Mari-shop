@@ -5,9 +5,7 @@ import Navigation from "@cp/Common/Navigation.vue";
 </script>
 
 <template>
-<!--  <Home/>-->
-  <ProductDetails />
-
+  <RouterView/>
 </template>
 
 <style >
