@@ -5,9 +5,9 @@ import Navigation from "@cp/Common/Navigation.vue";
 </script>
 
 <template>
-  <Home/>
-<!--  <ProductDetails />-->
-  <Navigation/>
+<!--  <Home/>-->
+  <ProductDetails />
+
 </template>
 
 <style >

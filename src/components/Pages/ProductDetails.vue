@@ -3,6 +3,7 @@ import Header from "@cp/Common/Header.vue";
 import IconButton from "@cp/Common/IconButton.vue";
 import {ref} from "vue";
 import Like from "@cp/Common/Like.vue";
+import Button from "@cp/Common/Button.vue";
 const colors = [
   {id:1, color: '#758087', name:'darkGray'},
   {id:2, color: '#9aa7af', name:'gray'},
@@ -69,6 +70,13 @@ let activeSize = ref('XS');
 
       </section>
 
+    </section>
+
+    <section class="container__footer">
+      <div class="container__footer--items">
+        <Button/>
+        <IconButton img="icon/productDetails/cart.svg" />
+      </div>
     </section>
 
   </div>

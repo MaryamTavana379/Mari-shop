@@ -4,6 +4,7 @@ import Button from "@cp/Common/Button.vue";
 import Story from "@cp/Common/Story.vue";
 import ProductSwiper from "@cp/Common/ProductSwiper.vue";
 import IconButton from "@cp/Common/IconButton.vue";
+import Navigation from "@cp/Common/Navigation.vue";
 
 const storyData = [
   {id:1, img: 'image/home/story1.jpg', title:'مریم محمدپور'},
@@ -70,6 +71,7 @@ const productsData = [
         </div>
       </div>
     </section>
+    <Navigation/>
   </div>
 
 
