@@ -23,16 +23,19 @@ const  breakpoints={
       :breakpoints="breakpoints"
   >
     <swiper-slide v-for="item in data">
-      <div class="swiper__slide--item">
-        <div class="swiper__slide--item-img">
-          <img :src="_image(item.img)" />
-          <like />
+      <router-link to="/product">
+        <div class="swiper__slide--item">
+          <div class="swiper__slide--item-img">
+            <img :src="_image(item.img)" />
+            <like />
+          </div>
+          <div class="swiper__slide--item-meta">
+            <h3>{{item.title}}</h3>
+            <h2>{{item.price}} تومان </h2>
+          </div>
         </div>
-        <div class="swiper__slide--item-meta">
-          <h3>{{item.title}}</h3>
-          <h2>{{item.price}} تومان </h2>
-        </div>
-      </div>
+
+      </router-link>
     </swiper-slide>
   </swiper>
 </template>
