@@ -9,19 +9,19 @@ import Navigation from "@cp/Common/Navigation.vue";
 const storyData = [
   {id:1, img: 'image/home/story1.jpg', title:'مریم محمدپور'},
   {id:2, img: 'image/home/story2.jpg', title:'زهرا توانا'},
-  {id:1, img: 'image/home/story3.jpg', title:'مریم توانا'},
-  {id:2, img: 'image/home/story4.jpg', title:'مریم توانا'},
-  {id:1, img: 'image/home/story1.jpg', title:'مریم توانا'},
-  {id:2, img: 'image/home/story2.jpg', title:'مریم توانا'},
-  {id:1, img: 'image/home/story5.jpg', title:'مریم علیزاده '},
-  {id:2, img: 'image/home/story2.jpg', title:'مریم توانا'},
+  {id:3, img: 'image/home/story3.jpg', title:'مریم توانا'},
+  {id:4, img: 'image/home/story4.jpg', title:'مریم توانا'},
+  {id:5, img: 'image/home/story1.jpg', title:'مریم توانا'},
+  {id:6, img: 'image/home/story2.jpg', title:'مریم توانا'},
+  {id:7, img: 'image/home/story5.jpg', title:'مریم علیزاده '},
+  {id:8, img: 'image/home/story2.jpg', title:'مریم توانا'},
 
 ]
 const productsData = [
   {id:1, img:'image/home/product1.jpg', title:" هودی مشکی مردانه" , price: "800,000"},
-  {id:1, img:'image/home/product2.jpg', title:" هودی مردانه زانتوس" , price: "1,800,000"},
-  {id:1, img:'image/home/product3.jpg', title:" هودی مردانه ایزی دو مدل" , price: "500,000"},
-  {id:1, img:'image/home/product1.jpg', title:" هودی مشکی مردانه" , price: "800,000"},
+  {id:2, img:'image/home/product2.jpg', title:" هودی مردانه زانتوس" , price: "1,800,000"},
+  {id:3, img:'image/home/product3.jpg', title:" هودی مردانه ایزی دو مدل" , price: "500,000"},
+  {id:4, img:'image/home/product1.jpg', title:" هودی مشکی مردانه" , price: "800,000"},
 
 ]
 

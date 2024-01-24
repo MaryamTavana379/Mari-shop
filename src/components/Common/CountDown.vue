@@ -1,26 +1,22 @@
 <script setup>
 
 import Button from "@cp/common/Button.vue";
-const props = defineProps(['data']);
-console.log(props.data)
-
+import {ref} from "vue"
+let number = ref(1)
 const countPlus = () => {
-  props.data.count++
+  number.value +=1;
 };
 const countMinus = () => {
-  if (countValue.value == 0) return;
-  countValue.value--;
+  if (number.value == 0) return;
+  number.value-=1;
 };
 </script>
 
 <template>
   <div class="box__attributes--counter">
-    <Button title="+" @click="data.count +=1" />
-    <label v-if="data.count" >{{data.count}}</label>
-    <Button title="-" @click="data.count -= 1" />
+    <button  @click="countPlus">+</button>
+
+    <label >{{number}}</label>
+    <button  @click="countMinus" >-</button>
   </div>
 </template>
-
-<style scoped>
-
-</style>

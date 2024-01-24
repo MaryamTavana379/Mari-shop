@@ -17,6 +17,15 @@ h3{
   font-size: 1.15rem;
   @extend .truncate;
 }
+h4{
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+p{
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: gray;
+}
 strong{
   font-size: 1.15rem;
   font-weight: 500;

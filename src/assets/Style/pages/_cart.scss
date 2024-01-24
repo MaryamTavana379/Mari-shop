@@ -1,0 +1,60 @@
+.container{
+  &__content{
+    &--list{
+      display: grid;
+      row-gap: 2rem;
+      &-item{
+        display: grid;
+        grid-template-columns: 40% 1fr;
+        gap: 2rem;
+        border-bottom: 1px solid $MainColor;
+        padding-bottom: 2rem;
+        .item__box{
+          display: grid;
+          &--img{
+            height: 10rem;
+            border-radius: 40px;
+            overflow: hidden;
+          }
+          &--number{
+            display: flex;
+            justify-content: space-between;
+            height: fit-content;
+            align-items: center;
+            span{
+              font-weight: 600;
+            }
+            .box__attributes--counter{
+              width: 100px;
+              background-color: $MainColor;
+              display: flex;
+              justify-content: center;
+              border-radius: 50px;
+              padding: 5px 5px;
+              gap: 10px;
+              align-items: center;
+              button{
+                width: 40px;
+                height: 40px;
+                border-radius: 50px;
+                font-size: 2rem;
+                color: white;
+                background-color: black;
+                border: none;
+              }
+            }
+
+          }
+
+        }
+      }
+    }
+    &--total{
+      &-item{
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+  }
+}
