@@ -7,14 +7,20 @@
         display: grid;
         grid-template-columns: 40% 1fr;
         gap: 2rem;
-        border-bottom: 1px solid $MainColor;
+        border-bottom: 2px solid $MainColor;
         padding-bottom: 2rem;
+        @include break(xs){
+          grid-template-columns: 1fr;
+        }
         .item__box{
           display: grid;
           &--img{
             height: 10rem;
             border-radius: 40px;
             overflow: hidden;
+            @include break(xs){
+              height: 100%;
+            }
           }
           &--number{
             display: flex;
@@ -24,35 +30,40 @@
             span{
               font-weight: 600;
             }
-            .box__attributes--counter{
-              width: 100px;
-              background-color: $MainColor;
-              display: flex;
-              justify-content: center;
-              border-radius: 50px;
-              padding: 5px 5px;
-              gap: 10px;
-              align-items: center;
-              button{
-                width: 40px;
-                height: 40px;
-                border-radius: 50px;
-                font-size: 2rem;
-                color: white;
-                background-color: black;
-                border: none;
-              }
-            }
-
           }
 
         }
       }
     }
     &--total{
-      &-item{
+      &-box1{
+        border-bottom: 2px solid $MainColor;
+        padding: 2rem 0;
+        display: grid;
+        gap: 1rem;
+        .box__attributes{
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+      &-box2{
         display: flex;
         justify-content: space-between;
+        padding: 2rem 0;
+        p,strong{
+          font-size: 1.5rem;
+          color: black;
+          font-weight: 700;
+        }
+
+      }
+    }
+    .button{
+      width: 100%;
+      height: 5.5rem;
+      button{
+        background-color: $SecondaryColor;
+        color: $WhiteColor;
       }
     }
 

@@ -54,7 +54,7 @@ const productsData = [
           <img src="@media/image/home/banner.jpg"/>
         </div>
         <div class="hero__container--btn">
-          <Button />
+          <Button txt="خرید" icon="icon/home/forward.svg" />
 
         </div>
       </div>

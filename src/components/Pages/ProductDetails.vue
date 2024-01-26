@@ -74,7 +74,7 @@ let activeSize = ref('XS');
 
     <section class="container__footer">
       <div class="container__footer--items">
-        <Button/>
+        <Button txt="خرید"/>
         <router-link to="/cart">
           <IconButton img="icon/productDetails/cart.svg" />
         </router-link>

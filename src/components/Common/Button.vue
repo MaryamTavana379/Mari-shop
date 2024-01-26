@@ -1,11 +1,11 @@
 <script setup>
-
+const props = defineProps(['txt','icon'])
 </script>
 
 <template>
   <div class="button">
-    <button >خرید</button>
-    <img class="button__icon" src="@media/icon/home/forward.svg"/>
+    <button >{{ txt }}</button>
+    <img v-if="icon" class="button__icon" :src="_image(icon)"/>
   </div>
 
 </template>
