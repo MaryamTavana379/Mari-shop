@@ -1,13 +1,12 @@
 <script setup>
+import {ref} from "vue";
 const props = defineProps(['data'])
-console.log(props.data)
-
 
 
 </script>
 
 <template>
-  <div class="story__item">
+  <div class="story__item" @click="$emit('onOpen',true)">
     <div class="story__item--profile">
       <img class="story__item--profile-img" :src="_image(data.img)" />
     </div>
@@ -15,5 +14,6 @@ console.log(props.data)
       <h3>{{data.title}}</h3>
     </div>
   </div>
+
 
 </template>

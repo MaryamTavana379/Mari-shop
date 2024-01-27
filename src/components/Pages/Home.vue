@@ -1,29 +1,32 @@
 <script setup>
+import {inject, onMounted, ref} from "vue";
 import Header from "../Common/Header.vue";
 import Button from "@cp/Common/Button.vue";
-import Story from "@cp/Common/Story.vue";
+import Story from "@cp/Layout/Home/Story.vue";
 import ProductSwiper from "@cp/Common/ProductSwiper.vue";
 import IconButton from "@cp/Common/IconButton.vue";
 import Navigation from "@cp/Common/Navigation.vue";
+import StorySwiper from "@cp/Layout/Home/StorySwiper.vue";
 
-const storyData = [
-  {id:1, img: 'image/home/story1.jpg', title:'مریم محمدپور'},
-  {id:2, img: 'image/home/story2.jpg', title:'زهرا توانا'},
-  {id:3, img: 'image/home/story3.jpg', title:'مریم توانا'},
-  {id:4, img: 'image/home/story4.jpg', title:'مریم توانا'},
-  {id:5, img: 'image/home/story1.jpg', title:'مریم توانا'},
-  {id:6, img: 'image/home/story2.jpg', title:'مریم توانا'},
-  {id:7, img: 'image/home/story5.jpg', title:'مریم علیزاده '},
-  {id:8, img: 'image/home/story2.jpg', title:'مریم توانا'},
 
-]
-const productsData = [
-  {id:1, img:'image/home/product1.jpg', title:" هودی مشکی مردانه" , price: "800,000"},
-  {id:2, img:'image/home/product2.jpg', title:" هودی مردانه زانتوس" , price: "1,800,000"},
-  {id:3, img:'image/home/product3.jpg', title:" هودی مردانه ایزی دو مدل" , price: "500,000"},
-  {id:4, img:'image/home/product1.jpg', title:" هودی مشکی مردانه" , price: "800,000"},
 
-]
+let showStory = ref(false);
+const axios = inject('axios');
+const productsData = ref();
+const storyData = ref()
+const isShowStory = (val)=>{
+  showStory.value = val;
+}
+onMounted(()=>{
+  axios.get(`http://localhost:3000/products`).then((res)=>{
+    productsData.value = res.data
+  });
+  axios.get(`http://localhost:3000/story`).then((res)=>{
+    storyData.value = res.data;
+  })
+
+})
+
 
 </script>
 
@@ -60,8 +63,9 @@ const productsData = [
       </div>
     </section>
     <section class="story">
-      <Story v-for="item in storyData" :key="item.id" :data="item"/>
+      <Story v-for="item in storyData" :key="item.id" :data="item" @onOpen="isShowStory"/>
     </section>
+    <StorySwiper v-if="showStory" :storyContent="storyData" />
     <section class="products">
       <div class="products__container">
         <h2> محصولات محبوب </h2>

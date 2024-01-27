@@ -39,7 +39,3 @@ const  breakpoints={
     </swiper-slide>
   </swiper>
 </template>
-
-<style scoped>
-
-</style>
