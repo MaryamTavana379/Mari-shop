@@ -16,7 +16,7 @@ const data= [
       <div class="header__productDetails">
         <IconButton img="icon/productDetails/arrow-right.svg" />
         <h2>  سبد خرید </h2>
-        <IconButton img="icon/productDetails/arrow-left.svg" />
+        <IconButton img="icon/cart/more.svg" />
       </div>
     </Header>
     <section class="container__content">

@@ -8,7 +8,7 @@ const showLike = ()=>{
 </script>
 
 <template>
-  <div class="likes" @click="showLike" >
+  <div class="likes" @click.prevent="showLike" >
     <img  v-if="liked" src="../../assets/media/icon/home/like.svg"/>
     <img v-else src="../../assets/media/icon/home/unLike.svg"/>
   </div>
