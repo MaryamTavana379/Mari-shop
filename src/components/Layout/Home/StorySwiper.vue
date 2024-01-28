@@ -7,7 +7,7 @@ console.log(props.storyContent)
 </script>
 
 <template>
-  <div class="swiper__container">
+  <div class="swiper__container" @click.prevent="$emit('onClose', false)">
     <swiper
         :slides-per-view="1"
         :space-between="20"
@@ -17,14 +17,18 @@ console.log(props.storyContent)
         class="swiper__container--story"
     >
       <swiper-slide v-for="item in storyContent">
-        <router-link to="/product">
-          <div class="swiper__slide--story">
-            <div class="swiper__slide--story-img">
-              <img :src="_image(item.img)" />
-            </div>
-            <Button :txt="miow"/>
+        <div class="swiper__container--story-box">
+          <div class="box__img">
+            <img :src="_image(item.img)" />
           </div>
-        </router-link>
+          <router-link to="/product">
+            <Button txt="miow"/>
+          </router-link>
+        </div>
+        <div class="swiper__container--story-close" @click.prevent="$emit('onClose', false)">
+          <img src="@media/icon/home/close.svg" />
+        </div>
+
       </swiper-slide>
     </swiper>
 

@@ -17,6 +17,9 @@ const storyData = ref()
 const isShowStory = (val)=>{
   showStory.value = val;
 }
+const closeStory = (val)=>{
+  showStory.value = val;
+}
 onMounted(()=>{
   axios.get(`http://localhost:3000/products`).then((res)=>{
     productsData.value = res.data
@@ -65,7 +68,7 @@ onMounted(()=>{
     <section class="story">
       <Story v-for="item in storyData" :key="item.id" :data="item" @onOpen="isShowStory"/>
     </section>
-    <StorySwiper v-if="showStory" :storyContent="storyData" />
+    <StorySwiper v-if="showStory" :storyContent="storyData" @onClose="closeStory"/>
     <section class="products">
       <div class="products__container">
         <h2> محصولات محبوب </h2>
