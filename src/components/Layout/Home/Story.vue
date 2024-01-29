@@ -1,26 +1,31 @@
-<script setup>
-import {ref} from "vue";
-const props = defineProps(['data'])
-
-let clickNumber = ref(0)
-const increment = ()=>{
-clickNumber.value = 1;
-}
-</script>
-
 <template>
-  <div class="story__item" @click="$emit('onOpen',{status:true, storyId:data.id})" v-if="data.content">
-    <div class="story__item--profile" @click="increment" :class="clickNumber == 1 ? 'seen' : ''" >
-      <img class="story__item--profile-img" :src="_image(data.img)" />
-    </div>
-    <div class="story__item--title">
-      <h3>{{data.title}}</h3>
-    </div>
-  </div>
+  <Swiper
+      :slides-per-view="4.5"
+      :space-between="20"
+  >
+    <SwiperSlide v-for="item in data" @click="increment" :class="item.seen === 1   ? 'seen' : ''">
+      <div class="story__item" @click="$emit('onOpen',item)" v-if="item.content">
+        <div class="story__item--profile">
+          <img class="story__item--profile-img" :src="_image(item.img)"/>
+        </div>
+        <div class="story__item--title">
+          <h3>{{ item.title }}</h3>
+        </div>
+      </div>
+    </SwiperSlide>
+  </Swiper>
 
 
 </template>
 
-<style scoped>
 
-</style>
+<script setup>
+import {ref} from "vue";
+import {Swiper, SwiperSlide} from "swiper/vue";
+
+const props = defineProps(['data'])
+let clickNumber = ref(0)
+const increment = () => {
+  clickNumber.value = 1;
+}
+</script>

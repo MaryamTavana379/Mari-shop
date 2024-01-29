@@ -1,6 +1,4 @@
-.swiper-wrapper{
-  transition-duration: 500ms !important;
-}
+
 .swiper__container{
   position: absolute !important;
   top: 0;
@@ -17,9 +15,10 @@
   animation: appear 350ms ease-in 1;
 
   &--story {
+    height: 60%;
     &-box {
       width: 95%;
-      height: 300px;
+      height: 100%;
       margin: auto;
       border-radius: 30px;
       overflow: hidden;

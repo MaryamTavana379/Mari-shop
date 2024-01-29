@@ -1,3 +1,8 @@
+.seen{
+  .story__item--profile{
+    border: 1px solid $MainColor;
+  }
+}
 .story__item{
   display: grid;
   justify-items: center;
@@ -20,7 +25,5 @@
   &--title{
     width: 80px;
   }
-  .seen{
-    border: 1px solid $MainColor;
-  }
+
 }

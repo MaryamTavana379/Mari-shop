@@ -15,10 +15,7 @@ body, html{
     @include break(xs){
       font-size: 14px;
     }
-
   }
-
-
 }
 img{
   display: flex;
@@ -34,6 +31,9 @@ img{
 }
 .swiper{
   z-index: 50;
+}
+.swiper-wrapper{
+  transition-duration: 500ms !important;
 }
 input{
   font-family: 'YekanBakh-FaNum';

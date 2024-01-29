@@ -6,8 +6,7 @@ import Story from "@cp/Layout/Home/Story.vue";
 import ProductSwiper from "@cp/Common/ProductSwiper.vue";
 import IconButton from "@cp/Common/IconButton.vue";
 import Navigation from "@cp/Common/Navigation.vue";
-import StorySwiper from "@cp/Layout/Home/StorySwiper.vue";
-
+import StoryContent from "@cp/Layout/Home/StoryContent.vue";
 
 
 let showStory = ref(false);
@@ -15,19 +14,23 @@ let storyId = ref([]);
 const axios = inject('axios');
 const productsData = ref();
 const storyData = ref()
-const isShowStory = (val)=>{
-  showStory.value = val.status;
-  storyId.value = val.storyId;
+const setStory = (item) => {
+  item.seen = 1;
+  storyId.value = item.id;
+  showStory.value = true;
+}
+const closeStory = (seenItems) => {
+  seenItems.forEach((item) => {
+    item.seen = 1;
+  });
+  showStory.value = false;
+};
 
-}
-const closeStory = (val)=>{
-  showStory.value = val;
-}
-onMounted(()=>{
-  axios.get(`http://localhost:3000/products`).then((res)=>{
+onMounted(() => {
+  axios.get(`http://localhost:3000/products`).then((res) => {
     productsData.value = res.data
   });
-  axios.get(`http://localhost:3000/story`).then((res)=>{
+  axios.get(`http://localhost:3000/story`).then((res) => {
     storyData.value = res.data;
   })
 
@@ -44,14 +47,14 @@ console.log(storyData)
             <div class="search__container--input">
               <input type="search" placeholder="جستجوی محصول"/>
               <div class="search__container--input-icon">
-                <img src="@media/icon/home/search.svg" />
+                <img src="@media/icon/home/search.svg"/>
               </div>
             </div>
 
           </div>
         </div>
         <div class="filter">
-          <IconButton img="icon/home/filter.svg" />
+          <IconButton img="icon/home/filter.svg"/>
 
         </div>
       </div>
@@ -62,23 +65,22 @@ console.log(storyData)
           <img src="@media/image/home/banner.jpg"/>
         </div>
         <div class="hero__container--btn">
-          <Button txt="خرید" icon="icon/home/forward.svg" />
+          <Button txt="خرید" icon="icon/home/forward.svg"/>
 
         </div>
       </div>
     </section>
     <section class="story">
-      <Story v-for="item in storyData" :key="item.id" :data="item" @onOpen="isShowStory"/>
+      <Story :data="storyData" @onOpen="setStory"/>
     </section>
 
-    <StorySwiper v-if="showStory" :storyContent="storyData" :storyId="storyId" @onClose="closeStory"/>
+    <StoryContent v-if="showStory" :storyContent="storyData" :storyId="storyId" @onClose="closeStory"/>
 
     <section class="products">
       <div class="products__container">
         <h2> محصولات محبوب </h2>
         <div class="products__container--item">
-          <ProductSwiper :data="productsData" />
-
+          <ProductSwiper :data="productsData"/>
         </div>
       </div>
     </section>

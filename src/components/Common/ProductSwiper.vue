@@ -18,8 +18,6 @@ const  breakpoints={
   <swiper
       :slides-per-view="2"
       :space-between="20"
-      @swiper="onSwiper"
-      @slideChange="onSlideChange"
       :breakpoints="breakpoints"
   >
     <swiper-slide v-for="item in data">
