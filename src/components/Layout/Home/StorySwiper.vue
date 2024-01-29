@@ -1,9 +1,8 @@
 <script setup>
 import {Swiper, SwiperSlide} from "swiper/vue";
-import Like from "@cp/Common/Like.vue";
 import Button from "@cp/Common/Button.vue";
-const props = defineProps(['storyContent']);
-console.log(props.storyContent)
+const props = defineProps(['storyContent','storyId']);
+
 </script>
 
 <template>
@@ -12,14 +11,14 @@ console.log(props.storyContent)
         :slides-per-view="1"
         :space-between="20"
         @swiper="onSwiper"
-        @slideChange="onSlideChange"
         :breakpoints="breakpoints"
+        :initial-slide="storyId"
         class="swiper__container--story"
     >
-      <swiper-slide v-for="item in storyContent">
-        <div class="swiper__container--story-box">
+      <swiper-slide v-for="content in storyContent">
+        <div class="swiper__container--story-box" v-if="content.content">
           <div class="box__img">
-            <img :src="_image(item.img)" />
+            <img :src="_image(content.content) " />
           </div>
           <router-link to="/product">
             <Button txt="miow"/>

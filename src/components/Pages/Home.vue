@@ -11,11 +11,14 @@ import StorySwiper from "@cp/Layout/Home/StorySwiper.vue";
 
 
 let showStory = ref(false);
+let storyId = ref([]);
 const axios = inject('axios');
 const productsData = ref();
 const storyData = ref()
 const isShowStory = (val)=>{
-  showStory.value = val;
+  showStory.value = val.status;
+  storyId.value = val.storyId;
+
 }
 const closeStory = (val)=>{
   showStory.value = val;
@@ -29,8 +32,7 @@ onMounted(()=>{
   })
 
 })
-
-
+console.log(storyData)
 </script>
 
 <template>
@@ -68,7 +70,9 @@ onMounted(()=>{
     <section class="story">
       <Story v-for="item in storyData" :key="item.id" :data="item" @onOpen="isShowStory"/>
     </section>
-    <StorySwiper v-if="showStory" :storyContent="storyData" @onClose="closeStory"/>
+
+    <StorySwiper v-if="showStory" :storyContent="storyData" :storyId="storyId" @onClose="closeStory"/>
+
     <section class="products">
       <div class="products__container">
         <h2> محصولات محبوب </h2>
