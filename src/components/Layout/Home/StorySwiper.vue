@@ -1,5 +1,6 @@
 <script setup>
 import {Swiper, SwiperSlide} from "swiper/vue";
+import { Navigation } from 'swiper/modules';
 import Button from "@cp/Common/Button.vue";
 const props = defineProps(['storyContent','storyId']);
 
@@ -14,6 +15,7 @@ const props = defineProps(['storyContent','storyId']);
         :breakpoints="breakpoints"
         :initial-slide="storyId"
         class="swiper__container--story"
+
     >
       <swiper-slide v-for="content in storyContent">
         <div class="swiper__container--story-box" v-if="content.content">

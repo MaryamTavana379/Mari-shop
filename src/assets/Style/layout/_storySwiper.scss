@@ -1,3 +1,6 @@
+.swiper-wrapper{
+  transition-duration: 500ms !important;
+}
 .swiper__container{
   position: absolute !important;
   top: 0;
@@ -11,6 +14,8 @@
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
+  animation: appear 350ms ease-in 1;
+
   &--story {
     &-box {
       width: 95%;
@@ -33,6 +38,9 @@
 
       .box__img {
         height: 100%;
+
+       img{
+       }
       }
 
     }
@@ -44,6 +52,5 @@
       top: 20px;
     }
   }
-
-
 }
+
