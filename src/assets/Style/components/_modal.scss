@@ -1,0 +1,36 @@
+.modal{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 9;
+  &__container{
+    &--head{
+      @extend .flex;
+      &-save{
+        color: #2e9b2e;
+        font-weight: 500;
+      }
+      &-filter{
+        font-size: 1.5rem;
+      }
+      .iconButton{
+        background-color: $WhiteColor;
+        img{
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+    &--body{
+      &-row{
+        .row__title{
+          @extend .grid;
+          grid-template-columns: 25% 1fr;
+        }
+      }
+    }
+  }
+
+}

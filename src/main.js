@@ -6,6 +6,7 @@ import global from "@/global.js";
 import axios from "axios";
 import VueAxios from "vue-axios";
 
+
 const app = createApp(App);
 app.mixin(global);
 app.use(router);

@@ -7,10 +7,12 @@ import ProductSwiper from "@cp/Common/ProductSwiper.vue";
 import IconButton from "@cp/Common/IconButton.vue";
 import Navigation from "@cp/Common/Navigation.vue";
 import StoryContent from "@cp/Layout/Home/StoryContent.vue";
+import Modal from "@cp/Common/Modal.vue";
 
 
 let showStory = ref(false);
 let storyId = ref([]);
+let isShowModal = ref(false)
 const axios = inject('axios');
 const productsData = ref();
 const storyData = ref()
@@ -53,9 +55,8 @@ console.log(storyData)
 
           </div>
         </div>
-        <div class="filter">
+        <div class="filter" @click="isShowModal = true" >
           <IconButton img="icon/home/filter.svg"/>
-
         </div>
       </div>
     </Header>
@@ -73,9 +74,7 @@ console.log(storyData)
     <section class="story">
       <Story :data="storyData" @onOpen="setStory"/>
     </section>
-
     <StoryContent v-if="showStory" :storyContent="storyData" :storyId="storyId" @onClose="closeStory"/>
-
     <section class="products">
       <div class="products__container">
         <h2> محصولات محبوب </h2>
@@ -85,6 +84,7 @@ console.log(storyData)
       </div>
     </section>
     <Navigation/>
+    <Modal v-if="isShowModal" @onClose="isShowModal = false"/>
   </div>
 
 
