@@ -14,13 +14,25 @@ import slider from "vue3-slider"
       <section class="modal__container--body">
         <div class="modal__container--body-row">
           <div class="row__title">
-            <span> براساس قیمت </span>
+            <span>  همه </span>
             <hr/>
           </div>
-          <slider v-model="myNumber" step="2" />
+          <div class="row__container">
+            <div class="row__container--items">
+              <input type="checkbox" id="newest" />
+              <label for="newest">جدیدترین ها</label>
+            </div>
+            <div class="row__container--items">
+              <input type="checkbox" id="newest" />
+              <label for="newest">جدیدترین ها</label>
+            </div>
+          </div>
+
         </div>
         <div class="modal__container--body-row"></div>
-        <div class="modal__container--body-row"></div>
+        <div class="modal__container--body-row">
+          <slider v-model="myNumber" step="2" />
+        </div>
 
       </section>
 

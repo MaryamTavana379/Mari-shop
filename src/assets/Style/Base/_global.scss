@@ -35,16 +35,7 @@ img{
 .swiper-wrapper{
   transition-duration: 500ms !important;
 }
-input{
-  font-family: 'YekanBakh-FaNum';
-  font-size: 1rem;
-  width: 100%;
-  background-color:$MainColor ;
-  height: 60px;
-  padding: 2rem;
-  @extend .rounded;
 
-}
 section{
   margin-top: 2rem;
 }

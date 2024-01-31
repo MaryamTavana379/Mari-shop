@@ -27,8 +27,9 @@
       &-row{
         .row__title{
           @extend .grid;
-          grid-template-columns: 25% 1fr;
+          grid-template-columns: 8% 1fr;
         }
+        
       }
     }
   }

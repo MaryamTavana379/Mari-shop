@@ -1,19 +1,12 @@
-@import "./base/variables";
-@import "./base/keyframes";
-@import "./base/responsive";
-@import "./base/typography";
-@import "./components/scrollbar";
-@import "./base/font";
-@import "./base/global";
-@import "components/header";
-@import "./pages/home";
-@import "./components/button";
-@import "./components/story";
-@import "./components/productSwiper";
-@import "./components/iconButton";
-@import "./pages/productDetails";
-@import "./components/navigation";
-@import "./pages/cart";
-@import "./components/countDown";
-@import "layout/Home/storyContent";
-@import "./components/modal";
+//The base styles
+@import "base/variables";
+@import "base/responsive";
+@import "base/**/*.scss";
+
+//All components on the project
+@import "components/**/*.scss";
+
+//The pages styles
+@import "pages/**/*.scss";
+@import "layout/**/*.scss";
+
