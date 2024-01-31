@@ -24,14 +24,36 @@
       }
     }
     &--body{
+      display: grid;
+      row-gap: 3rem;
       &-row{
         .row__title{
           @extend .grid;
           grid-template-columns: 8% 1fr;
+          span{
+            font-weight: 500;
+          }
         }
-        
+        .row__container{
+          @extend .grid;
+          grid-template-columns: 1fr 1fr;
+        }
+        .season-row {
+          grid-template-columns: 26% 1fr;
+        }
+        .vue3-slider{
+          height: 10px;
+          background-color: black;
+          border-radius: 50px;
+          .handle{
+            width: 15px;
+            height: 15px;
+            top: -3px;
+          }
+        }
+
       }
+
     }
   }
-
 }

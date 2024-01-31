@@ -1,0 +1,16 @@
+.items{
+  &-card{
+    @extend .flex;
+    justify-content: right;
+    gap: 8px;
+    border: 1px solid $MainColor;
+    width: fit-content;
+    padding: 12px;
+    border-radius: 8px;
+    input:checked{
+      &+label{
+        color: #0058ff;
+      }
+    }
+  }
+}
