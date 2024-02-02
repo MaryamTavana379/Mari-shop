@@ -2,6 +2,7 @@
 import IconButton from "@cp/Common/IconButton.vue";
 import slider from "vue3-slider";
 import Checkbox from "@cp/Layout/Home/Checkbox.vue";
+import {ref} from "vue";
 
 const data = {
   all:{
@@ -28,8 +29,11 @@ const data = {
     isVisible:true,
     className:'season-row',
     title:'بر اساس قیمت',
+    bars:[
+      {id:1, title: ' از', name:'min', number:100, max:500},
+      {id:1, title: ' تا', name:'max', number: 500, max: 1000000}
+    ]
   }
-
 }
 
 </script>
@@ -38,7 +42,7 @@ const data = {
   <div class="modal">
     <div class="modal__container">
       <div class="modal__container--head">
-        <strong class="modal__container--head-save">ثبت</strong>
+        <strong class="modal__container--head-save" @click="$emit('onClose')">ثبت</strong>
         <h2 class="modal__container--head-filter">فیلتر</h2>
         <IconButton img="icon/home/close.svg" @click="$emit('onClose')"/>
       </div>
@@ -51,7 +55,15 @@ const data = {
           <section class="row__container">
             <Checkbox :data="item.items"/>
           </section>
-          <slider v-model="myNumber" step="2" v-if="item.isVisible"/>
+          <div class="row__rangeBar">
+            <div class="row__rangeBar--box" v-for="bar in item.bars">
+              <label :for="bar.name" class="row__rangeBar--box-txt">{{bar.title}}</label>
+              <slider v-model="bar.number" step="100" handleScale="3" :max="bar.max" :min="bar.number" tooltipText="%v"  tooltip="true" alwaysShowHandle="true" v-if="item.isVisible" />
+              <span>{{bar.number}}</span>
+              <strong class="row__rangeBar--box-txt">تومان</strong>
+            </div>
+
+          </div>
         </div>
       </section>
     </div>

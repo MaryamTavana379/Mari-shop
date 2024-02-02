@@ -5,12 +5,15 @@
   height: 100%;
   background-color: white;
   z-index: 9;
+  animation: drawer 1000ms ;
+
   &__container{
     &--head{
       @extend .flex;
       &-save{
         color: #2e9b2e;
         font-weight: 500;
+        cursor: pointer;
       }
       &-filter{
         font-size: 1.5rem;
@@ -41,19 +44,30 @@
         .season-row {
           grid-template-columns: 26% 1fr;
         }
-        .vue3-slider{
-          height: 10px;
-          background-color: black;
-          border-radius: 50px;
-          .handle{
-            width: 15px;
-            height: 15px;
-            top: -3px;
+        .row__rangeBar{
+          display: grid;
+          row-gap: 3rem;
+
+          &--box{
+            @extend .flex;
+            gap: 20px;
+            .vue3-slider{
+              height: 10px;
+              background-color: $MainColor;
+              border-radius: 50px;
+              .track-filled, .handle{
+                background-color: $SecondaryColor;
+
+              }
+            }
+            &-txt{
+              font-size: 1rem;
+              font-weight: 500;
+            }
           }
+
         }
-
       }
-
     }
   }
 }
