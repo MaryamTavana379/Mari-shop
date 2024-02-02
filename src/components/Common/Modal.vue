@@ -2,8 +2,13 @@
 import IconButton from "@cp/Common/IconButton.vue";
 import slider from "vue3-slider";
 import Checkbox from "@cp/Layout/Home/Checkbox.vue";
-import {ref} from "vue";
+import {computed, ref} from "vue";
+ const props = defineProps(['data']);
+const dataFiltered = ref([]);
+const getStore = ()=>{
+  dataFiltered.value.push(props.data.filter((item)=> item.filterType === "newest"));
 
+}
 const data = {
   all:{
     title:'همه',
@@ -36,15 +41,16 @@ const data = {
   }
 }
 
+
 </script>
 
 <template>
   <div class="modal">
     <div class="modal__container">
       <div class="modal__container--head">
-        <strong class="modal__container--head-save" @click="$emit('onClose')">ثبت</strong>
-        <h2 class="modal__container--head-filter">فیلتر</h2>
-        <IconButton img="icon/home/close.svg" @click="$emit('onClose')"/>
+        <strong class="modal__container--head-save" @click="$emit('onClose', dataFiltered)">ثبت</strong>
+        <h2 class="modal__container--head-filter" @click="getStore">فیلتر</h2>
+        <IconButton img="icon/home/close.svg" @click="$emit('onClose', dataFiltered)"/>
       </div>
       <section class="modal__container--body">
         <div class="modal__container--body-row" v-for="item in data" >
@@ -53,7 +59,7 @@ const data = {
             <hr/>
           </div>
           <section class="row__container">
-            <Checkbox :data="item.items"/>
+            <Checkbox :data="item.items" />
           </section>
           <div class="row__rangeBar">
             <div class="row__rangeBar--box" v-for="bar in item.bars">

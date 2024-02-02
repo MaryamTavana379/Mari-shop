@@ -1,5 +1,5 @@
 <script setup>
-import {inject, onMounted, ref} from "vue";
+import {computed, inject, onMounted, ref} from "vue";
 import Header from "../Common/Header.vue";
 import Button from "@cp/Common/Button.vue";
 import Story from "@cp/Layout/Home/Story.vue";
@@ -8,6 +8,7 @@ import IconButton from "@cp/Common/IconButton.vue";
 import Navigation from "@cp/Common/Navigation.vue";
 import StoryContent from "@cp/Layout/Home/StoryContent.vue";
 import Modal from "@cp/Common/Modal.vue";
+import Filter from "@cp/Pages/Filter.vue";
 
 
 let showStory = ref(false);
@@ -15,7 +16,14 @@ let storyId = ref([]);
 let isShowModal = ref(false)
 const axios = inject('axios');
 const productsData = ref();
-const storyData = ref()
+const storyData = ref();
+const showFiltered = ref();
+const filterLength = ref()
+const setFilteredData = (dataFiltered)=>{
+  isShowModal.value = false;
+  showFiltered.value = dataFiltered;
+  filterLength.value = dataFiltered.length;
+}
 const setStory = (item) => {
   item.seen = 1;
   storyId.value = item.id;
@@ -37,7 +45,7 @@ onMounted(() => {
   })
 
 })
-console.log(storyData)
+
 </script>
 
 <template>
@@ -55,7 +63,7 @@ console.log(storyData)
 
           </div>
         </div>
-        <div class="filter" @click="isShowModal = true" >
+        <div class="filterIcon" @click="isShowModal = true" >
           <IconButton img="icon/home/filter.svg"/>
         </div>
       </div>
@@ -84,7 +92,8 @@ console.log(storyData)
       </div>
     </section>
     <Navigation/>
-    <Modal v-if="isShowModal" @onClose="isShowModal = false"/>
+    <Modal v-if="isShowModal" @onClose="setFilteredData" :data="productsData"/>
+    <Filter v-if="filterLength > 0" :data="showFiltered" />
   </div>
 
 

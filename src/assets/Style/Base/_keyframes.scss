@@ -3,11 +3,20 @@
     opacity: 0;
   }
 }
-@keyframes drawer {
+@keyframes OpenDrawer {
   from {
     transform: translate(0, 100%);
   }
   to {
     transform: translate(0%, 0);
+  }
+}
+@keyframes CloseDrawer {
+  from {
+    transform: translate(0%, 0);
+  }
+  to {
+    transform: translate(0, 100%);
+
   }
 }
