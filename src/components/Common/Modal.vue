@@ -3,12 +3,19 @@ import IconButton from "@cp/Common/IconButton.vue";
 import slider from "vue3-slider";
 import Checkbox from "@cp/Layout/Home/Checkbox.vue";
 import {computed, ref} from "vue";
- const props = defineProps(['data']);
+const props = defineProps(['data']);
 const dataFiltered = ref([]);
-const getStore = ()=>{
-  dataFiltered.value.push(props.data.filter((item)=> item.filterType === "newest"));
 
+const dataChecked = ref();
+const getStore = ()=>{
+  dataFiltered.value.push(props.data.filter((item)=> item.filterType === dataChecked.value ));
 }
+const setDataChecked = (item)=>{
+  dataChecked.value = item.name;
+  getStore();
+}
+
+
 const data = {
   all:{
     title:'همه',
@@ -49,7 +56,7 @@ const data = {
     <div class="modal__container">
       <div class="modal__container--head">
         <strong class="modal__container--head-save" @click="$emit('onClose', dataFiltered)">ثبت</strong>
-        <h2 class="modal__container--head-filter" @click="getStore">فیلتر</h2>
+        <h2 class="modal__container--head-filter">فیلتر</h2>
         <IconButton img="icon/home/close.svg" @click="$emit('onClose', dataFiltered)"/>
       </div>
       <section class="modal__container--body">
@@ -59,7 +66,7 @@ const data = {
             <hr/>
           </div>
           <section class="row__container">
-            <Checkbox :data="item.items" />
+            <Checkbox :data="item.items" @onClicked="setDataChecked" />
           </section>
           <div class="row__rangeBar">
             <div class="row__rangeBar--box" v-for="bar in item.bars">

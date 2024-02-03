@@ -1,0 +1,15 @@
+.card{
+  &__container{
+    @extend .grid;
+    gap: 1rem;
+    &--img{
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    &--meta{
+      h3{
+        text-align: right;
+      }
+    }
+  }
+}

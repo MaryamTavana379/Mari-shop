@@ -1,9 +1,9 @@
 {
   "products" : [
     {"id":1, "img":"image/home/product1.jpg", "title":" هودی مشکی مردانه" , "price": "800,000", "filterType": "newest"},
-    {"id":2, "img":"image/home/product2.jpg", "title":" هودی مردانه زانتوس" , "price": "1,800,000"},
-    {"id":3, "img":"image/home/product3.jpg", "title":" هودی مردانه ایزی دو مدل" , "price": "500,000"},
-    {"id":4, "img":"image/home/product1.jpg", "title":" هودی مشکی مردانه" , "price": "800,000"}
+    {"id":2, "img":"image/home/product2.jpg", "title":" هودی مردانه زانتوس" , "price": "1,800,000", "filterType": "expensive"},
+    {"id":3, "img":"image/home/product3.jpg", "title":" هودی مردانه ایزی دو مدل" , "price": "500,000", "filterType": "cheap"},
+    {"id":4, "img":"image/home/product1.jpg", "title":" هودی مشکی مردانه" , "price": "800,000", "filterType": "score"}
   ],
   "story": [
     {"id":0, "img": "image/home/story1.jpg", "title": "مریم محمدپور" , "content": "image/home/story1.jpg", "seen": 0},

@@ -51,6 +51,7 @@ onMounted(() => {
 <template>
   <div class="container">
     <Header>
+
       <div class="header__home">
         <div class="search">
           <div class="search__container">
