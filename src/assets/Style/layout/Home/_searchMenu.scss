@@ -8,17 +8,24 @@
   &__container{
     border-radius: 8px;
     background-color: $MainColor;
+    width: 90%;
+    margin: auto;
     height: 33vh;
     transition: ease-in-out;
     &--row{
       &-item{
         width: 95%;
         margin: auto;
+        position: relative;
         input{
           background-color: transparent;
-          border-bottom: 1px solid;
+          border-bottom: 1px solid $SecondaryColor;
           border-radius: 0;
-
+          padding-right: 4.25rem;
+        }
+        .search__container--input-icon{
+          right: 20px;
+          opacity: 1;
         }
       }
 

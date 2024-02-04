@@ -8,6 +8,7 @@ const props = defineProps(['data']);
 </script>
 
 <template>
+
   <div class="filter">
     <Header>
       <div class="header__productDetails">

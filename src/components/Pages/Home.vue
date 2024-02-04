@@ -71,8 +71,9 @@ onMounted(() => {
         <div class="filterIcon" @click="isShowModal = true" >
           <IconButton img="icon/home/filter.svg"/>
         </div>
+        <SearchMenu v-if="isSearchMenu" @onClose="setSearchClass" :class="isSearchMenu === true? 'isActive' : searchClass"/>
+        
       </div>
-      <SearchMenu v-if="isSearchMenu" @onClose=" setSearchClass" :class="isSearchMenu === true? 'isActive' : searchClass"/>
     </Header>
     <section class="hero">
       <div class="hero__container">

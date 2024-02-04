@@ -1,0 +1,5 @@
+.searchPage{
+  &__container{
+    @extend .filter__container;
+  }
+}
