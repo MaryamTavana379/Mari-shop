@@ -1,0 +1,35 @@
+.searchMenu{
+  position: absolute;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  &__container{
+    border-radius: 8px;
+    background-color: $MainColor;
+    height: 33vh;
+    transition: ease-in-out;
+    &--row{
+      &-item{
+        width: 95%;
+        margin: auto;
+        input{
+          background-color: transparent;
+          border-bottom: 1px solid;
+          border-radius: 0;
+
+        }
+      }
+
+    }
+  }
+}
+.isActive{
+  animation: SearchMenu 1000ms ;
+
+}
+.inActive{
+  animation: CloseSearchMenu 1000ms;
+
+}

@@ -9,16 +9,22 @@ import Navigation from "@cp/Common/Navigation.vue";
 import StoryContent from "@cp/Layout/Home/StoryContent.vue";
 import Modal from "@cp/Common/Modal.vue";
 import Filter from "@cp/Pages/Filter.vue";
+import SearchMenu from "@cp/Layout/Home/SearchMenu.vue";
 
-
+let isSearchMenu = ref(false);
+const searchClass = ref()
 let showStory = ref(false);
 let storyId = ref([]);
-let isShowModal = ref(false)
+let isShowModal = ref(false);
 const axios = inject('axios');
 const productsData = ref();
 const storyData = ref();
 const showFiltered = ref();
-const filterLength = ref()
+const filterLength = ref();
+const setSearchClass= (className)=>{
+  searchClass.value = className;
+  isSearchMenu.value = false;
+}
 const setFilteredData = (dataFiltered)=>{
   isShowModal.value = false;
   showFiltered.value = dataFiltered;
@@ -51,23 +57,22 @@ onMounted(() => {
 <template>
   <div class="container">
     <Header>
-
       <div class="header__home">
         <div class="search">
           <div class="search__container">
             <div class="search__container--input">
-              <input type="search" placeholder="جستجوی محصول"/>
+              <input type="search" placeholder="جستجوی محصول" @click="isSearchMenu = true"/>
               <div class="search__container--input-icon">
                 <img src="@media/icon/home/search.svg"/>
               </div>
             </div>
-
           </div>
         </div>
         <div class="filterIcon" @click="isShowModal = true" >
           <IconButton img="icon/home/filter.svg"/>
         </div>
       </div>
+      <SearchMenu v-if="isSearchMenu" @onClose=" setSearchClass" :class="isSearchMenu === true? 'isActive' : searchClass"/>
     </Header>
     <section class="hero">
       <div class="hero__container">
@@ -76,7 +81,6 @@ onMounted(() => {
         </div>
         <div class="hero__container--btn">
           <Button txt="خرید" icon="icon/home/forward.svg"/>
-
         </div>
       </div>
     </section>
@@ -94,7 +98,7 @@ onMounted(() => {
     </section>
     <Navigation/>
     <Modal v-if="isShowModal" @onClose="setFilteredData" :data="productsData"/>
-    <Filter v-if="filterLength > 0" :data="showFiltered" />
+    <Filter v-if="filterLength > 0" :data="showFiltered" @onClose="filterLength = 0" />
   </div>
 
 

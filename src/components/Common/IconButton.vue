@@ -3,9 +3,9 @@ const props = defineProps(['img']);
 </script>
 
 <template>
-  <div class="iconButton">
+  <router-link to="/" class="iconButton">
     <img :src="_image(img)" />
-  </div>
+  </router-link>
 </template>
 
 <style scoped>
