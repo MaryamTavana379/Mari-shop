@@ -14,7 +14,7 @@ router.push({
 
 <template>
 <div class="searchMenu" @click="$emit('onClose' , ' inActive')">
-  <div class="searchMenu__container">
+  <div class="searchMenu__container"  @click.stop="">
     <div class="searchMenu__container--row">
       <div class="searchMenu__container--row-item">
         <input type="search" placeholder="جستجو"  @keyup.enter="searchFunc">

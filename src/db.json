@@ -1,18 +1,128 @@
 {
-  "products" : [
-    {"id":1, "img":"image/home/product1.jpg", "title":" هودی مشکی مردانه" , "price": "800,000", "filterType": "newest"},
-    {"id":2, "img":"image/home/product2.jpg", "title":" هودی مردانه زانتوس" , "price": "1,800,000", "filterType": "expensive"},
-    {"id":3, "img":"image/home/product3.jpg", "title":" هودی مردانه ایزی دو مدل" , "price": "500,000", "filterType": "cheap"},
-    {"id":4, "img":"image/home/product1.jpg", "title":" هودی مشکی مردانه" , "price": "800,000", "filterType": "score"}
+  "products": [
+    {
+      "id": 1,
+      "img": "image/home/product1.jpg",
+      "title": " هودی مشکی مردانه",
+      "price": "500,000",
+      "filterType": "newest",
+      "varieties": [
+        {
+          "color": "#758087",
+          "size": "L",
+          "stock": 1,
+          "price": "500,000",
+          "img": "image/home/product1.jpg",
+          "title": "  مشکی "
+        },
+        {
+          "color": "#9aa7af",
+          "size": "M",
+          "stock": 1,
+          "price": "700,000",
+          "img": "image/home/product2.jpg",
+          "title": "  خاکستری "
+
+
+        },
+        {
+          "color": "#c4ced5",
+          "size": "M",
+          "stock": 1,
+          "price": "500,000",
+          "img": "image/home/product3.jpg",
+          "title": "  خاکستری روشن "
+
+
+        },
+        {
+          "color": "#d7d7d7",
+          "size": "M",
+          "stock": 1,
+          "price": "800,000",
+          "img": "image/home/product2.jpg",
+          "title": "   سفید "
+
+
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "img": "image/home/product2.jpg",
+      "title": " هودی مردانه زانتوس",
+      "price": "1,800,000",
+      "filterType": "expensive"
+    },
+    {
+      "id": 3,
+      "img": "image/home/product3.jpg",
+      "title": " هودی مردانه ایزی دو مدل",
+      "price": "500,000",
+      "filterType": "cheap"
+    },
+    {
+      "id": 4,
+      "img": "image/home/product1.jpg",
+      "title": " هودی مشکی مردانه",
+      "price": "800,000",
+      "filterType": "score"
+    }
   ],
   "story": [
-    {"id":0, "img": "image/home/story1.jpg", "title": "مریم محمدپور" , "content": "image/home/story1.jpg", "seen": 0},
-    {"id":1, "img": "image/home/story2.jpg", "title":"زهرا توانا" , "content": "image/home/story2.jpg", "seen": 0},
-    {"id":2, "img": "image/home/story3.jpg", "title": "مریم توانا" , "content": "image/home/story3.jpg", "seen": 0 },
-    {"id":3, "img": "image/home/story4.jpg", "title":"مریم توانا", "content": "image/home/story4.jpg", "seen": 0},
-    {"id":4, "img": "image/home/story1.jpg", "title":"مریم توانا", "content": "image/home/story1.jpg", "seen": 0},
-    {"id":5, "img": "image/home/story2.jpg", "title":"مریم توانا" , "content": "image/home/story2.jpg", "seen": 0},
-    {"id":6, "img": "image/home/story5.jpg", "title":"مریم علیزاده " , "seen": 0},
-    {"id":7, "img": "image/home/story2.jpg", "title":"مریم توانا" , "seen": 0}
+    {
+      "id": 0,
+      "img": "image/home/story1.jpg",
+      "title": "مریم محمدپور",
+      "content": "image/home/story1.jpg",
+      "seen": 0
+    },
+    {
+      "id": 1,
+      "img": "image/home/story2.jpg",
+      "title": "زهرا توانا",
+      "content": "image/home/story2.jpg",
+      "seen": 0
+    },
+    {
+      "id": 2,
+      "img": "image/home/story3.jpg",
+      "title": "مریم توانا",
+      "content": "image/home/story3.jpg",
+      "seen": 0
+    },
+    {
+      "id": 3,
+      "img": "image/home/story4.jpg",
+      "title": "مریم توانا",
+      "content": "image/home/story4.jpg",
+      "seen": 0
+    },
+    {
+      "id": 4,
+      "img": "image/home/story1.jpg",
+      "title": "مریم توانا",
+      "content": "image/home/story1.jpg",
+      "seen": 0
+    },
+    {
+      "id": 5,
+      "img": "image/home/story2.jpg",
+      "title": "مریم توانا",
+      "content": "image/home/story2.jpg",
+      "seen": 0
+    },
+    {
+      "id": 6,
+      "img": "image/home/story5.jpg",
+      "title": "مریم علیزاده ",
+      "seen": 0
+    },
+    {
+      "id": 7,
+      "img": "image/home/story2.jpg",
+      "title": "مریم توانا",
+      "seen": 0
+    }
   ]
 }

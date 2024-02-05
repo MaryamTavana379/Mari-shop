@@ -19,7 +19,6 @@ function loading(number = 0){
   if (number>1){
     isLoaded.value = true;
   }else {
-    console.log(number, pending.value, isLoaded.value);
 
     setTimeout(()=>{
       pending.value = false;
