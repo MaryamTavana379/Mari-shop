@@ -1,5 +1,6 @@
 .filter{
   @extend .modal;
+  animation: none;
   text-align: right;
   &__container{
     @extend .grid;

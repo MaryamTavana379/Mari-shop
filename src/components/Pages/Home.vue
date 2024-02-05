@@ -10,6 +10,23 @@ import StoryContent from "@cp/Layout/Home/StoryContent.vue";
 import Modal from "@cp/Common/Modal.vue";
 import Filter from "@cp/Pages/Filter.vue";
 import SearchMenu from "@cp/Layout/Home/SearchMenu.vue";
+import Skeleton from "@cp/Layout/Home/Skeleton.vue";
+
+let isLoaded = ref(false);
+let pending = ref(true);
+
+function loading(number = 0){
+  if (number>1){
+    isLoaded.value = true;
+  }else {
+    console.log(number, pending.value, isLoaded.value);
+
+    setTimeout(()=>{
+      pending.value = false;
+      loading(number+1)
+    },1000)
+  }
+}
 
 let isSearchMenu = ref(false);
 const searchClass = ref()
@@ -49,31 +66,34 @@ onMounted(() => {
   axios.get(`http://localhost:3000/story`).then((res) => {
     storyData.value = res.data;
   })
-
+  loading();
 })
 
 </script>
 
 <template>
-  <div class="container">
+  <Skeleton v-if="pending || !isLoaded" />
+  <div v-else class="container">
     <Header>
       <div class="header__home">
         <div class="search">
           <div class="search__container">
             <div class="search__container--input">
               <input type="search" placeholder="جستجوی محصول" @click="isSearchMenu = true"/>
+
               <div class="search__container--input-icon">
                 <img src="@media/icon/home/search.svg"/>
               </div>
             </div>
           </div>
+
         </div>
         <div class="filterIcon" @click="isShowModal = true" >
           <IconButton img="icon/home/filter.svg"/>
         </div>
         <SearchMenu v-if="isSearchMenu" @onClose="setSearchClass" :class="isSearchMenu === true? 'isActive' : searchClass"/>
-        
       </div>
+
     </Header>
     <section class="hero">
       <div class="hero__container">
@@ -101,10 +121,4 @@ onMounted(() => {
     <Modal v-if="isShowModal" @onClose="setFilteredData" :data="productsData"/>
     <Filter v-if="filterLength > 0" :data="showFiltered" @onClose="filterLength = 0" />
   </div>
-
-
 </template>
-
-<style scoped>
-
-</style>

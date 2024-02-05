@@ -5,7 +5,7 @@ import router from "./router";
 import global from "@/global.js";
 import axios from "axios";
 import VueAxios from "vue-axios";
-
+import 'vue-skeletor/dist/vue-skeletor.css';
 
 const app = createApp(App);
 app.mixin(global);
