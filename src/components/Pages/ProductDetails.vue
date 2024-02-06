@@ -77,7 +77,7 @@ function setVarieties() {
           <strong> سایز :</strong>
         </div>
         <div class="container__content--properties-list">
-          <div class="list__item" v-for="size in sizes" @click="activeSize = size.name"
+          <div class="list__item" v-for="size in activeItem.size" @click="activeSize = size.name"
                :class="size.name === activeSize ? 'isActiveSize' : size.name">
             <span>{{ size.name }}</span>
           </div>

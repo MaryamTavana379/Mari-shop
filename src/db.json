@@ -9,7 +9,28 @@
       "varieties": [
         {
           "color": "#758087",
-          "size": "L",
+          "size": [
+            {
+              "id": 1 ,
+              "name": "XL"
+            },
+            {
+              "id": 2,
+              "name": "L"
+            },
+            {
+              "id": 3 ,
+              "name": "M"
+            },
+            {
+              "id": 4 ,
+              "name": "S"
+            },
+            {
+              "id": 5 ,
+              "name": "XS"
+            }
+          ],
           "stock": 1,
           "price": "500,000",
           "img": "image/home/product1.jpg",
@@ -17,33 +38,86 @@
         },
         {
           "color": "#9aa7af",
-          "size": "M",
+          "size": [
+            {
+              "id": 1 ,
+              "name": "XL"
+            },
+            {
+              "id": 2 ,
+              "name": "L"
+            },
+            {
+              "id": 3,
+              "name": "M"
+            }
+
+          ],
+
           "stock": 1,
           "price": "700,000",
           "img": "image/home/product2.jpg",
           "title": "  خاکستری "
-
-
         },
         {
           "color": "#c4ced5",
-          "size": "M",
+          "size": [
+            {
+              "id": 1 ,
+              "name": "XL"
+            },
+            {
+              "id": 1 ,
+              "name": "L"
+            },
+            {
+              "id": 1 ,
+              "name": "M"
+            },
+            {
+              "id": 1 ,
+              "name": "S"
+            },
+            {
+              "id": 1 ,
+              "name": "XS"
+            }
+          ],
+
           "stock": 1,
           "price": "500,000",
           "img": "image/home/product3.jpg",
           "title": "  خاکستری روشن "
-
-
         },
         {
           "color": "#d7d7d7",
-          "size": "M",
+          "size": [
+            {
+              "id": 1 ,
+              "name": "XL"
+            },
+            {
+              "id": 1 ,
+              "name": "L"
+            },
+            {
+              "id": 1 ,
+              "name": "M"
+            },
+            {
+              "id": 1 ,
+              "name": "S"
+            },
+            {
+              "id": 1 ,
+              "name": "XS"
+            }
+          ],
+
           "stock": 1,
           "price": "800,000",
           "img": "image/home/product2.jpg",
           "title": "   سفید "
-
-
         }
       ]
     },
