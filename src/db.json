@@ -126,21 +126,363 @@
       "img": "image/home/product2.jpg",
       "title": " هودی مردانه زانتوس",
       "price": "1,800,000",
-      "filterType": "expensive"
+      "filterType": "expensive",
+      "varieties": [
+        {
+          "color": "#758087",
+          "size": [
+            {
+              "id": 1 ,
+              "name": "XL"
+            },
+            {
+              "id": 2,
+              "name": "L"
+            },
+            {
+              "id": 3 ,
+              "name": "M"
+            },
+            {
+              "id": 4 ,
+              "name": "S"
+            },
+            {
+              "id": 5 ,
+              "name": "XS"
+            }
+          ],
+          "stock": 1,
+          "price": "500,000",
+          "img": "image/home/product2.jpg",
+          "title": "  مشکی "
+        },
+        {
+          "color": "#9aa7af",
+          "size": [
+            {
+              "id": 1 ,
+              "name": "XL"
+            },
+            {
+              "id": 2 ,
+              "name": "L"
+            },
+            {
+              "id": 3,
+              "name": "M"
+            }
+
+          ],
+
+          "stock": 1,
+          "price": "700,000",
+          "img": "image/home/product2.jpg",
+          "title": "  خاکستری "
+        },
+        {
+          "color": "#c4ced5",
+          "size": [
+            {
+              "id": 1 ,
+              "name": "XL"
+            },
+            {
+              "id": 1 ,
+              "name": "L"
+            },
+            {
+              "id": 1 ,
+              "name": "M"
+            },
+            {
+              "id": 1 ,
+              "name": "S"
+            },
+            {
+              "id": 1 ,
+              "name": "XS"
+            }
+          ],
+
+          "stock": 1,
+          "price": "500,000",
+          "img": "image/home/product3.jpg",
+          "title": "  خاکستری روشن "
+        },
+        {
+          "color": "#d7d7d7",
+          "size": [
+            {
+              "id": 1 ,
+              "name": "XL"
+            },
+            {
+              "id": 1 ,
+              "name": "L"
+            },
+            {
+              "id": 1 ,
+              "name": "M"
+            },
+            {
+              "id": 1 ,
+              "name": "S"
+            },
+            {
+              "id": 1 ,
+              "name": "XS"
+            }
+          ],
+
+          "stock": 1,
+          "price": "800,000",
+          "img": "image/home/product2.jpg",
+          "title": "   سفید "
+        }
+      ]
     },
     {
       "id": 3,
       "img": "image/home/product3.jpg",
       "title": " هودی مردانه ایزی دو مدل",
       "price": "500,000",
-      "filterType": "cheap"
+      "filterType": "cheap",
+      "varieties": [
+        {
+          "color": "#758087",
+          "size": [
+            {
+              "id": 1 ,
+              "name": "XL"
+            },
+            {
+              "id": 2,
+              "name": "L"
+            },
+            {
+              "id": 3 ,
+              "name": "M"
+            },
+            {
+              "id": 4 ,
+              "name": "S"
+            },
+            {
+              "id": 5 ,
+              "name": "XS"
+            }
+          ],
+          "stock": 1,
+          "price": "500,000",
+          "img": "image/home/product3.jpg",
+          "title": "  مشکی "
+        },
+        {
+          "color": "#9aa7af",
+          "size": [
+            {
+              "id": 1 ,
+              "name": "XL"
+            },
+            {
+              "id": 2 ,
+              "name": "L"
+            },
+            {
+              "id": 3,
+              "name": "M"
+            }
+
+          ],
+
+          "stock": 1,
+          "price": "700,000",
+          "img": "image/home/product2.jpg",
+          "title": "  خاکستری "
+        },
+        {
+          "color": "#c4ced5",
+          "size": [
+            {
+              "id": 1 ,
+              "name": "XL"
+            },
+            {
+              "id": 1 ,
+              "name": "L"
+            },
+            {
+              "id": 1 ,
+              "name": "M"
+            },
+            {
+              "id": 1 ,
+              "name": "S"
+            },
+            {
+              "id": 1 ,
+              "name": "XS"
+            }
+          ],
+
+          "stock": 1,
+          "price": "500,000",
+          "img": "image/home/product3.jpg",
+          "title": "  خاکستری روشن "
+        },
+        {
+          "color": "#d7d7d7",
+          "size": [
+            {
+              "id": 1 ,
+              "name": "XL"
+            },
+            {
+              "id": 1 ,
+              "name": "L"
+            },
+            {
+              "id": 1 ,
+              "name": "M"
+            },
+            {
+              "id": 1 ,
+              "name": "S"
+            },
+            {
+              "id": 1 ,
+              "name": "XS"
+            }
+          ],
+
+          "stock": 1,
+          "price": "800,000",
+          "img": "image/home/product2.jpg",
+          "title": "   سفید "
+        }
+      ]
     },
     {
       "id": 4,
       "img": "image/home/product1.jpg",
       "title": " هودی مشکی مردانه",
       "price": "800,000",
-      "filterType": "score"
+      "filterType": "score",
+      "varieties": [
+        {
+          "color": "#758087",
+          "size": [
+            {
+              "id": 1 ,
+              "name": "XL"
+            },
+            {
+              "id": 2,
+              "name": "L"
+            },
+            {
+              "id": 3 ,
+              "name": "M"
+            },
+            {
+              "id": 4 ,
+              "name": "S"
+            },
+            {
+              "id": 5 ,
+              "name": "XS"
+            }
+          ],
+          "stock": 1,
+          "price": "500,000",
+          "img": "image/home/product1.jpg",
+          "title": "  مشکی "
+        },
+        {
+          "color": "#9aa7af",
+          "size": [
+            {
+              "id": 1 ,
+              "name": "XL"
+            },
+            {
+              "id": 2 ,
+              "name": "L"
+            },
+            {
+              "id": 3,
+              "name": "M"
+            }
+
+          ],
+
+          "stock": 1,
+          "price": "700,000",
+          "img": "image/home/product2.jpg",
+          "title": "  خاکستری "
+        },
+        {
+          "color": "#c4ced5",
+          "size": [
+            {
+              "id": 1 ,
+              "name": "XL"
+            },
+            {
+              "id": 1 ,
+              "name": "L"
+            },
+            {
+              "id": 1 ,
+              "name": "M"
+            },
+            {
+              "id": 1 ,
+              "name": "S"
+            },
+            {
+              "id": 1 ,
+              "name": "XS"
+            }
+          ],
+
+          "stock": 1,
+          "price": "500,000",
+          "img": "image/home/product3.jpg",
+          "title": "  خاکستری روشن "
+        },
+        {
+          "color": "#d7d7d7",
+          "size": [
+            {
+              "id": 1 ,
+              "name": "XL"
+            },
+            {
+              "id": 1 ,
+              "name": "L"
+            },
+            {
+              "id": 1 ,
+              "name": "M"
+            },
+            {
+              "id": 1 ,
+              "name": "S"
+            },
+            {
+              "id": 1 ,
+              "name": "XS"
+            }
+          ],
+
+          "stock": 1,
+          "price": "800,000",
+          "img": "image/home/product2.jpg",
+          "title": "   سفید "
+        }
+      ]
     }
   ],
   "story": [

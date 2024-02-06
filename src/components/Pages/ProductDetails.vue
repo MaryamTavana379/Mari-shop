@@ -5,6 +5,7 @@ import { inject, onMounted, ref} from "vue";
 import Like from "@cp/Common/Like.vue";
 import Button from "@cp/Common/Button.vue";
 
+const props = defineProps(['id'])
 const sizes = [
   {id: 1, name: 'XS'},
   {id: 2, name: 'S'},
@@ -17,9 +18,9 @@ let activeSize = ref('XS');
 const productsData = ref([])
 const axios = inject('axios');
 onMounted(() => {
-  axios.get(`http://localhost:3000/products/1`).then((res) => {
+  axios.get(`http://localhost:3000/products/${props.id}`).then((res) => {
     productsData.value = res.data;
-
+console.log(res.data)
     setVarieties();
   });
 });

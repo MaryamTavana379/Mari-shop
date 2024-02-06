@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import Like from "@cp/Common/Like.vue";
 const props = defineProps(['data']);
+console.log(props.data)
 const  breakpoints={
 '320': {
       slidesPerView: 1.25,
@@ -21,7 +22,7 @@ const  breakpoints={
       :breakpoints="breakpoints"
   >
     <swiper-slide v-for="item in data">
-      <router-link to="/product">
+      <router-link :to="{name: 'product' , params:{id:item.id}}">
         <div class="swiper__slide--item">
           <div class="swiper__slide--item-img">
             <img :src="_image(item.img)" />
