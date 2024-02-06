@@ -26,7 +26,6 @@ return data.value.filter((item)=>{
     <div class="searchPage" >
       <Header>
         <div class="header__productDetails">
-          <IconButton img="icon/productDetails/arrow-right.svg" />
           <h2> فیلتر شده </h2>
           <IconButton img="icon/productDetails/arrow-left.svg" @click="$emit('onClose')"/>
         </div>

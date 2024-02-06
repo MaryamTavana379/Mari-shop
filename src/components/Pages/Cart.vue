@@ -14,9 +14,9 @@ const data= [
   <div class="container">
     <Header>
       <div class="header__productDetails">
-        <IconButton img="icon/productDetails/arrow-right.svg" />
+        <IconButton img="icon/home/home.svg"/>
         <h2>  سبد خرید </h2>
-        <IconButton img="icon/cart/more.svg" />
+        <IconButton img="icon/cart/more.svg"  linkAddress="/"/>
       </div>
     </Header>
     <section class="container__content">
@@ -34,7 +34,7 @@ const data= [
             </div>
             <div class="item__box--number">
               <strong>{{item.price}} تومان</strong>
-              <CountDown />
+              <CountDown :price="item.price"/>
 
             </div>
 

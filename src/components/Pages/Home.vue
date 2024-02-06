@@ -79,7 +79,6 @@ onMounted(() => {
           <div class="search__container">
             <div class="search__container--input">
               <input type="search" placeholder="جستجوی محصول" @click="isSearchMenu = true"/>
-
               <div class="search__container--input-icon">
                 <img src="@media/icon/home/search.svg"/>
               </div>
@@ -88,7 +87,7 @@ onMounted(() => {
 
         </div>
         <div class="filterIcon" @click="isShowModal = true" >
-          <IconButton img="icon/home/filter.svg"/>
+          <IconButton img="icon/home/filter.svg" />
         </div>
         <SearchMenu v-if="isSearchMenu" @onClose="setSearchClass" :class="isSearchMenu === true? 'isActive' : searchClass"/>
       </div>

@@ -12,7 +12,6 @@ const props = defineProps(['data']);
   <div class="filter">
     <Header>
       <div class="header__productDetails">
-        <IconButton img="icon/productDetails/arrow-right.svg" />
         <h2> فیلتر شده </h2>
         <IconButton img="icon/productDetails/arrow-left.svg" @click="$emit('onClose')"/>
       </div>

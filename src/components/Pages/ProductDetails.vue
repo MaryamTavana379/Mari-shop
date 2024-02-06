@@ -6,13 +6,7 @@ import Like from "@cp/Common/Like.vue";
 import Button from "@cp/Common/Button.vue";
 
 const props = defineProps(['id'])
-const sizes = [
-  {id: 1, name: 'XS'},
-  {id: 2, name: 'S'},
-  {id: 3, name: 'M'},
-  {id: 4, name: 'L'},
-  {id: 5, name: 'XL'},
-]
+
 let activeItem = ref({});
 let activeSize = ref('XS');
 const productsData = ref([])
@@ -43,9 +37,9 @@ function setVarieties() {
   <div class="container">
     <Header>
       <div class="header__productDetails">
-        <IconButton img="icon/productDetails/arrow-right.svg"/>
+        <IconButton img="icon/productDetails/cart.svg"/>
         <h2> جزییات محصول </h2>
-        <IconButton img="icon/productDetails/arrow-left.svg"/>
+        <IconButton img="icon/productDetails/arrow-left.svg" linkAddress="/"/>
       </div>
     </Header>
 
@@ -90,10 +84,10 @@ function setVarieties() {
 
     <section class="container__footer">
       <div class="container__footer--items">
-        <Button txt="خرید"/>
         <router-link to="/cart">
-          <IconButton img="icon/productDetails/cart.svg"/>
+          <Button txt="خرید" />
         </router-link>
+        <IconButton img="icon/productDetails/cart.svg"/>
       </div>
     </section>
 
