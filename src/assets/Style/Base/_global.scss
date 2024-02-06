@@ -6,13 +6,16 @@
 body, html{
   background-color: #f7f7f7;
   color: $SecondaryColor;
-  overflow-x: hidden;
+  overflow: hidden;
   #app{
     background-color: $WhiteColor;
     max-width: 500px;
+    height: 100vh;
     margin: auto;
     font-family: 'YekanBakh-FaNum';
     font-size: 16px;
+    overflow-y: scroll;
+    direction: ltr;
     @include break(xs){
       font-size: 14px;
     }
