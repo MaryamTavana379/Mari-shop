@@ -1,7 +1,6 @@
 <script setup>
 import { Skeletor } from 'vue-skeletor';
 import Header from "@cp/Common/Header.vue";
-import ProductSwiper from "@cp/Common/ProductSwiper.vue";
 
 
 </script>

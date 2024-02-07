@@ -12,19 +12,12 @@ import Filter from "@cp/Pages/Filter.vue";
 import SearchMenu from "@cp/Layout/Home/SearchMenu.vue";
 import Skeleton from "@cp/Layout/Home/Skeleton.vue";
 
-let isLoaded = ref(false);
-let pending = ref(true);
+let isLoading = ref(true);
 
-function loading(number = 0){
-  if (number>1){
-    isLoaded.value = true;
-  }else {
-
-    setTimeout(()=>{
-      pending.value = false;
-      loading(number+1)
-    },1000)
-  }
+function loading(){
+  setTimeout(()=>{
+    isLoading.value = false;
+  },1500)
 }
 
 let isSearchMenu = ref(false);
@@ -71,8 +64,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <Skeleton v-if="pending || !isLoaded" />
-  <div v-else class="container">
+  <Skeleton v-if="isLoading" />
+  <div v-else class="container" :class="isSearchMenu  ? 'overflowHidden' : ''">
     <Header>
       <div class="header__home">
         <div class="search">
@@ -89,10 +82,11 @@ onMounted(() => {
         <div class="filterIcon" @click="isShowModal = true" >
           <IconButton img="icon/home/filter.svg" />
         </div>
-        <SearchMenu v-if="isSearchMenu" @onClose="setSearchClass" :class="isSearchMenu === true? 'isActive' : searchClass"/>
       </div>
 
     </Header>
+    <SearchMenu v-if="isSearchMenu" @onClose="setSearchClass" :class="isSearchMenu === true? 'isActive' : searchClass"/>
+
     <section class="hero">
       <div class="hero__container">
         <div class="hero__container--banner">

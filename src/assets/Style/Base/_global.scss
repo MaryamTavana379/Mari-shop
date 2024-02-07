@@ -8,14 +8,7 @@ body, html{
   color: $SecondaryColor;
   overflow: hidden;
   #app{
-    background-color: $WhiteColor;
-    max-width: 500px;
-    height: 100vh;
-    margin: auto;
-    font-family: 'YekanBakh-FaNum';
-    font-size: 16px;
-    overflow-y: scroll;
-    direction: ltr;
+
     @include break(xs){
       font-size: 14px;
     }
@@ -28,10 +21,20 @@ img{
   height: 100%;
 }
 .container{
-  width: 90%;
-  margin: auto;
-  padding: 1rem 0;
+  width: 100%;
+  padding: 0 1rem;
   position: relative;
+  background-color: $WhiteColor;
+  max-width: 500px;
+  height: 100vh;
+  margin: auto;
+  font-family: 'YekanBakh-FaNum';
+  font-size: 16px;
+  overflow-y: scroll;
+  direction: ltr;
+}
+.overflowHidden{
+  overflow: hidden;
 }
 .swiper{
   z-index: 50;

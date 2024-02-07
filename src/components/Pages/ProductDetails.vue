@@ -37,9 +37,9 @@ function setVarieties() {
   <div class="container">
     <Header>
       <div class="header__productDetails">
-        <IconButton img="icon/productDetails/cart.svg"/>
+        <IconButton img="icon/productDetails/cart.svg" route="cart"/>
         <h2> جزییات محصول </h2>
-        <IconButton img="icon/productDetails/arrow-left.svg" linkAddress="/"/>
+        <IconButton img="icon/productDetails/arrow-left.svg" @click="$router.go(-1)"/>
       </div>
     </Header>
 
