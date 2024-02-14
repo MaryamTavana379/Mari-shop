@@ -4,8 +4,9 @@
       "id": 1,
       "img": "image/home/product1.jpg",
       "title": " هودی مشکی مردانه",
-      "price": "500,000",
+      "price":500000,
       "filterType": "newest",
+      "count": 1,
       "varieties": [
         {
           "color": "#758087",
@@ -125,8 +126,9 @@
       "id": 2,
       "img": "image/home/product2.jpg",
       "title": " هودی مردانه زانتوس",
-      "price": "1,800,000",
+      "price": 1800000,
       "filterType": "expensive",
+      "count": 1,
       "varieties": [
         {
           "color": "#758087",
@@ -246,8 +248,9 @@
       "id": 3,
       "img": "image/home/product3.jpg",
       "title": " هودی مردانه ایزی دو مدل",
-      "price": "500,000",
+      "price": 500000,
       "filterType": "cheap",
+      "count": 1,
       "varieties": [
         {
           "color": "#758087",
@@ -367,8 +370,9 @@
       "id": 4,
       "img": "image/home/product1.jpg",
       "title": " هودی مشکی مردانه",
-      "price": "800,000",
+      "price": 800000,
       "filterType": "score",
+      "count": 1,
       "varieties": [
         {
           "color": "#758087",

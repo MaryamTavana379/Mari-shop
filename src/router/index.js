@@ -18,9 +18,10 @@ const router = createRouter({
             props:true
         },
         {
-            path: "/cart",
+            path: "/cart/",
             name:"cart",
             component:Cart,
+            props:true
         },
         {
             path: "/search/:query?",

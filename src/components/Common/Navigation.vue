@@ -3,7 +3,7 @@ import {ref} from "vue";
 
 const icons=[
   {id:1, img:'icon/home/home.svg', route:'/'},
-  {id:2, img:'icon/home/bag.svg',  route:'cart'},
+  {id:2, img:'icon/home/bag.svg',  route:'cart', count: 2},
   {id:3, img:'icon/home/alarm.svg', },
   {id:4, img:'icon/home/profile.svg'},
 ]
@@ -17,7 +17,8 @@ let itemActive = ref(icons[0].id)
 
         <div class="navigation__container--list-item" v-for="icon in icons" @click="itemActive = icon.id"  :class="icon.id === itemActive ? 'isActive' : '' ">
 
-          <router-link :to="'/'+ icon.route">
+          <router-link :to="'/'+ icon.route" class="item__box">
+            <strong class="cartCount" v-if="icon.count">{{icon.count}}</strong>
             <img :src="_image(icon.img)" />
           </router-link>
         </div>

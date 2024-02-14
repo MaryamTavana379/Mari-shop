@@ -13,6 +13,7 @@ export default defineConfig({
       "@cp": fileURLToPath(new URL("./src/components/", import.meta.url)),
       "@media": fileURLToPath(new URL("./src/assets/media", import.meta.url)),
       "@style": fileURLToPath(new URL("./src/assets/style", import.meta.url)),
+      "@store": fileURLToPath(new URL("./src/store", import.meta.url)),
     },
   },
 })

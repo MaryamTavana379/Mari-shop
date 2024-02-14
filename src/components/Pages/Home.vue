@@ -1,5 +1,5 @@
 <script setup>
-import {computed, inject, onMounted, ref} from "vue";
+import {inject, onMounted, ref} from "vue";
 import Header from "../Common/Header.vue";
 import Button from "@cp/Common/Button.vue";
 import Story from "@cp/Layout/Home/Story.vue";

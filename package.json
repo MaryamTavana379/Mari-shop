@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "json-server": "^1.0.0-alpha.23",
+    "pinia": "^2.1.7",
     "swiper": "^11.0.5",
     "vite-plugin-sass-glob-import": "^3.0.2",
     "vue": "^3.4.15",
