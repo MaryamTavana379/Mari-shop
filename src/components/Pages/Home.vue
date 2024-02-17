@@ -7,7 +7,7 @@ import ProductSwiper from "@cp/Common/ProductSwiper.vue";
 import IconButton from "@cp/Common/IconButton.vue";
 import Navigation from "@cp/Common/Navigation.vue";
 import StoryContent from "@cp/Layout/Home/StoryContent.vue";
-import Modal from "@cp/Common/Modal.vue";
+import Modal from "@cp/modals/Filter.vue";
 import Filter from "@cp/Pages/Filter.vue";
 import SearchMenu from "@cp/Layout/Home/SearchMenu.vue";
 import Skeleton from "@cp/Layout/Home/Skeleton.vue";
@@ -101,10 +101,16 @@ onMounted(() => {
       <Story :data="storyData" @onOpen="setStory"/>
     </section>
     <StoryContent v-if="showStory" :storyContent="storyData" :storyId="storyId" @onClose="closeStory"/>
-    <section class="products">
-      <div class="products__container">
-        <h2> محصولات محبوب </h2>
-        <div class="products__container--item">
+    <section class="container__selected">
+      <div class="container__selected--box">
+        <div class="container__selected--box-title">
+          <h2> محصولات محبوب </h2>
+          <router-link to="/products">
+            <span>همه</span>
+          </router-link>
+        </div>
+
+        <div class="container__selected--box-item">
           <ProductSwiper :data="productsData"/>
         </div>
       </div>

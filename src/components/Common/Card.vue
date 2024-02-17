@@ -5,7 +5,7 @@ console.log(props.data)
 
 <template>
   <div class="card">
-    <router-link to="/product" class="card__container">
+    <router-link :to="{name: 'product' , params:{id:data.id}}" class="card__container">
       <div class="card__container--img">
         <img :src="_image(data.img)" />
       </div>

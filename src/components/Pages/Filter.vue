@@ -26,6 +26,3 @@ const props = defineProps(['data']);
 
 </template>
 
-<style scoped>
-
-</style>

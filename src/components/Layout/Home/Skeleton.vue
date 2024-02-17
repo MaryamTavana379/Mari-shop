@@ -24,14 +24,13 @@ import Header from "@cp/Common/Header.vue";
     <section class="products">
       <div class="products__container">
         <Skeletor width="150" height="20" />
-        <div class="products__container--item">
-          <Skeletor width="200" height="240" v-for="item in 2" />
-        </div>
-        <div class="swiper">
-          <div class="swiper__meta" v-for="item in 2" >
-            <Skeletor width="150" height="20" v-for="item in 2"  />
+        <div class="products__container--list">
+          <div class="products__container--list-item" v-for="item in 2">
+            <Skeletor width="240" height="250"  />
+            <div class="ite__meta">
+              <Skeletor width="150" height="20" v-for="item in 2"  />
+            </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -43,17 +42,19 @@ import Header from "@cp/Common/Header.vue";
 </template>
 
 <style scoped>
-.products__container--item{
+.products__container--list{
   display: flex;
   justify-content: space-between;
+  margin-top: 2rem;
 }
-.swiper{
-  display: flex;
-  gap: 6rem;
-}
-.swiper__meta{
+.ite__meta{
   margin-top: 1rem;
   display: grid;
   gap: 1rem;
 }
+.vue-skeletor--rect{
+  border-radius: 35px;
+
+}
+
 </style>

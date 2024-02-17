@@ -1,0 +1,11 @@
+.products{
+  &__list{
+    @extend .grid;
+    &--item{
+      .card__container{
+        grid-template-columns: 25% 1fr;
+      }
+    }
+
+  }
+}
